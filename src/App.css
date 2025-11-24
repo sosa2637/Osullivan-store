@@ -1,0 +1,89 @@
+// Variables couleurs (basées sur celles que tu utilises déjà)
+$color-bg: #282c34;
+$color-primary: #61dafb;
+$color-light: #ffffff;
+
+// RESET basique
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg;
+  color: $color-light;
+  font-family: "Poppins", sans-serif;
+}
+
+// Hero section (remplace ton ancien header)
+.App-header {
+  min-height: 100vh;
+  width: 100%;
+  padding: 4rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #1f242d 0%,
+    #282c34 60%,
+    #303540 100%
+  );
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: $color-primary;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+  }
+
+  .App-link {
+    padding: 12px 24px;
+    background-color: $color-primary;
+    color: #1f1f1f;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba($color-primary, 0.4);
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba($color-primary, 0.6);
+    }
+  }
+}
+
+// Logo animé optionnel
+.App-logo {
+  height: 25vmin;
+  margin-bottom: 1.5rem;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

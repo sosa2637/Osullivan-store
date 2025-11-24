@@ -1,0 +1,118 @@
+.categories-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7f7;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #a75a99;
+    font-weight: 700;
+  }
+
+  /* ---- BOUTONS DE CATEGORIES ---- */
+  .boutons {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+
+        input[type="radio"] {
+          accent-color: #a75a99;
+          width: 18px;
+          height: 18px;
+        }
+
+        label {
+          color: #a75a99;
+          font-weight: 600;
+          cursor: pointer;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  /* ---- LISTE DE PRODUITS ---- */
+  
+  .products-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 8rem;
+    padding-bottom: 2rem;
+
+    .product-card {
+      background: white;
+      padding: 3rem 3rem ;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+      }
+
+      img {
+        height: 140px;
+        object-fit: contain;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+        color: #333;
+        height: 80px;
+        overflow: hidden;
+      }
+
+      p {
+        color: #a75a99;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .details-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        background: #a75a99;
+        color: white;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        transition: 0.25s ease;
+
+        &:hover {
+          background: #8b3d7e;
+        }
+      }
+    }
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    .boutons ul {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

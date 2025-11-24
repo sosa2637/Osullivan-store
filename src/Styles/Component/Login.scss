@@ -1,0 +1,100 @@
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #a75a99, #8b3d7e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* animation d'apparition */
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: slideUp 0.5s ease;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #a75a99;
+  }
+
+  /* input */
+  input {
+    width: 100%;
+    padding: 0.9rem;
+    margin: 0.7rem 0;
+    border-radius: 12px;
+    border: 1px solid #d3d3d3;
+    background: #fafafa;
+    font-size: 1rem;
+    transition: 0.25s ease;
+
+    &:focus {
+      border-color: #a75a99;
+      box-shadow: 0 0 0 3px rgba(167, 90, 153, 0.2);
+      outline: none;
+    }
+  }
+
+  /* bouton */
+  button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 12px;
+    background: #a75a99;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+
+    &:hover {
+      background: #8b3d7e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 2.2rem 1.7rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    input {
+      padding: 0.8rem;
+    }
+
+    button {
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+}
