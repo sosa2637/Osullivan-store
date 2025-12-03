@@ -20,7 +20,12 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-    </div>
+  <div style={{
+  background: "red",
+  height: "40px",
+  width: "100vw"
+}}>
+</div>
   );
 }
 
