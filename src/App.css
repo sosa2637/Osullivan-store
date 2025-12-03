@@ -1,13 +1,7 @@
-// Variables couleurs (basées sur celles que tu utilises déjà)
-$color-bg: #282c34;
-$color-primary: #61dafb;
-$color-light: #ffffff;
-
-// RESET basique
-* {
+html, body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .App {
@@ -20,7 +14,6 @@ $color-light: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
-// Hero section (remplace ton ancien header)
 .App-header {
   min-height: 100vh;
   width: 100%;
