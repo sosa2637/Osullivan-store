@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Components/Login';
@@ -7,6 +6,7 @@ import AllProducts from './Pages/AllProducts';
 import ProductDetail from './Pages/ProductDetail';
 import Cart from './Pages/Cart';
 import Navbar from './Components/Navbar';
+
 function App() {
   return (
     <div className="App">
@@ -20,7 +20,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-</div>
+    </div>
   );
 }
 
