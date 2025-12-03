@@ -9,16 +9,18 @@ import Cart from './Pages/Cart';
 import Navbar from './Components/Navbar';
 function App() {
   return (
-    <BrowserRouter>
-     <Navbar />  
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/products" element={<AllProducts />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/cart" element={<Cart />} /> 
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
